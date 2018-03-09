@@ -1,0 +1,6 @@
+<view class="page">
+  <image class="logo" src="{{img}}/logo.jpg" mode="widthFix"></image>
+  <view class="title"><text space="ensp">精确指引目的地最后百米</text></view>
+  <view class="button" bindtap="goNext">点击进入</view>
+  <view class="intro" bindtap="goFaq">粉我吧科技出品</view>
+</view>

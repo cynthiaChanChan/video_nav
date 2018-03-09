@@ -1,0 +1,48 @@
+<view class="page">
+	<view class="location-wrapper">
+ 		<image class="i-map" src="{{img}}/i-map.png" mode="widthFix"></image>
+ 		<view class="flex-box">
+	 		<view class="subtitle">广州市天河区天河北路高科大厦B座</view>
+	 		<view class="arrow-right"></view>
+ 		</view>
+ 	</view>
+ 	<view class="contact-wrapper">
+ 		<view class="flex-box">
+	 		<image class="icon" src="{{img}}/i-user.png" mode="widthFix"></image>
+	 		<view class="subtitle">联系人：</view>
+ 			<view class="input-wrapper">
+				<input value="{{userInput}}" bindinput="userInput" maxlength="15" placeholder-style="font-size: 30rpx; color: #d0d0d0; padding-left: 10rpx;" />
+			</view>
+ 		</view>
+ 		<view class="flex-box">
+	 		<image class="icon" src="{{img}}/i-phone.png" mode="widthFix"></image>
+	 		<view class="subtitle">联系电话：</view>
+ 			<view class="input-wrapper">
+				<input value="{{phoneInput}}" bindinput="phoneInput" maxlength="11" placeholder-style="font-size: 30rpx; color: #d0d0d0; padding-left: 10rpx;" />
+			</view>
+ 		</view>
+ 	</view>
+ 	<view class="routes-wrapper">
+ 		<view class="title">请选择以下交通路线并填写</view>
+ 		<view class="route" bindtap="edit" data-index="{{index}}" wx:for="{{routes}}" wx:key="index">
+	 		<view class="flex-box">
+		 		<view class="icon-wrapper">
+		 			<image class="icon" src="{{img}}{{item.icon}}.png" style="width: {{item.width}};" mode="widthFix"></image>
+		 		</view>
+			 	<view class="subtitle">{{item.title}}</view>
+			 	<view class="arrow {{arrows[item.arrowIdx]}}"></view>
+			</view>
+			<view class="edit-wrapper" wx:for="{{item.routeArray}}" wx:for-item="list" wx:for-index="idx" wx:key="idx">
+				<view class="desc-wrapper">
+					<view class="li flex-box" wx:for="{{list.descArray}}" wx:for-item="li" wx:for-index="i" wx:key="i">
+						<view class="circle"></view>
+						<view class="input-wrapper">
+							<input bindinput="phoneInput" maxlength="20" placeholder-style="font-size: 30rpx; color: #d0d0d0; padding-left: 10rpx;" />
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+ 	<view class="edit-button">完成</view>
+</view>

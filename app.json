@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/faq/faq",
+    "pages/intro/intro",
+    "pages/edit/edit"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f9f9f9",
+    "navigationBarTitleText": "导航小视频",
+    "navigationBarTextStyle":"black"
+  }
+}

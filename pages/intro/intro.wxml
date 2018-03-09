@@ -1,0 +1,37 @@
+<view class="page">
+	<swiper bindchange="changeSwiper" current="{{current}}" indicator-dots="{{isShowDots}}" indicator-color="#bdbdbd" indicator-active-color="#19b955">
+        <block>
+            <swiper-item style="height: auto;">
+            	<image class="pic" src="{{img}}swiper01.png" mode="widthFix"></image>
+            	<view class="intro">
+            		<text>你还在为跟着地图导航到达后，\n却像热锅上的蚂蚁<text id="blue">找不到具体位置</text>，\n而发愁上火吗？</text>
+            	</view>
+            </swiper-item>
+        </block>
+        <block>
+            <swiper-item style="height: auto;">
+            	<image class="pic" src="{{img}}swiper02.png" mode="widthFix"></image>
+            	<view class="intro">
+            		<text>你还在为朋友去家里做客，\n却<text id="pink">找不到最近的停车场</text>，\n而要下楼去充当交通指挥吗？</text>
+            	</view>
+            </swiper-item>
+        </block>
+        <block>
+            <swiper-item style="height: auto;">
+            	<image class="pic" src="{{img}}swiper03.png" mode="widthFix"></image>
+            	<view class="intro">
+            		<text>你还在为应聘者到达后<text id="purple">找不到大厦入口</text>，\n面临人才流失，而痛心疾首吗？</text>
+            	</view>
+            </swiper-item>
+        </block>
+        <block>
+            <swiper-item style="height: auto;" class="last">
+            	<image class="pic" src="{{img}}swiper04.png" mode="widthFix"></image>
+            	<view class="intro">
+            		<text>即刻使用<text id="green">《导航小视频》</text>，填补地图导航最后百米内的空缺，实况图片和视频结合展示目的地具体情况，手动填写真实路线，还有语音功能呦！让出行变得更有效。\n\n我们，不是一个地图导航那么简单！</text>
+            	</view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="swiper-button {{current == 3 ? '' : 'none'}}" bindtap="goNext">立即体验</view>
+</view>
