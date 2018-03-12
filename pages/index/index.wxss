@@ -11,6 +11,10 @@ page {
     background: bottom /cover url("https://www.korjo.cn/xcx/video_navImg/bg.jpg") fixed no-repeat;
 }
 
+.index-header {
+    position: relative;
+}
+
 .logo {
     width: 55%;
     margin: 0 auto;
@@ -21,6 +25,22 @@ page {
     font-size: 38rpx;
     line-height: 2;
 }
+
+.ufo {
+   -webkit-animation-name: fly;
+           animation-name: fly;
+   -webkit-animation-duration: 3s;
+           animation-duration: 3s;
+   -webkit-animation-timing-function: linear;
+           animation-timing-function: linear;
+   -webkit-animation-iteration-count: infinite;
+           animation-iteration-count: infinite;
+   width: 20%;
+   position: absolute;
+   right: 2%;
+   bottom: -30rpx;
+}
+
 
 .button {
     position: absolute;
@@ -45,4 +65,41 @@ page {
     bottom: 50rpx;
     font-size: 30rpx;
     text-decoration: underline;
+}
+
+@-webkit-keyframes fly {
+  0%{
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(10rpx, 20rpx);
+            transform: translate(10rpx, 20rpx);
+  }
+  50% {
+    -webkit-transform: translate(20rpx, 10rpx);
+            transform: translate(20rpx, 10rpx);
+  }
+  75% {
+    -webkit-transform: translate(10rpx, 10rpx);
+            transform: translate(10rpx, 10rpx);
+  }
+}
+@keyframes fly {
+  0%{
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(10rpx, 20rpx);
+            transform: translate(10rpx, 20rpx);
+  }
+  50% {
+    -webkit-transform: translate(20rpx, 10rpx);
+            transform: translate(20rpx, 10rpx);
+  }
+  75% {
+    -webkit-transform: translate(10rpx, 10rpx);
+            transform: translate(10rpx, 10rpx);
+  }
 }

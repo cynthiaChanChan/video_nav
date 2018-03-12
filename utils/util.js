@@ -230,6 +230,21 @@ function toast(title, callback) {
 	})
 }
 
+function modal(content, confirm, cancel) {
+	wx.showModal({
+	  	title: '提示',
+	  	content,
+	  	success: function(res) {
+	    	if (res.confirm) {
+	    		confirm && confirm();
+		      	
+		    } else if (res.cancel) {
+		      	cancel && cancel();
+		    }
+		}
+	})
+}
+
 function getNowObj() {
 	const today = new Date();
 	return {
@@ -269,6 +284,7 @@ module.exports = {
 	extend,
 	addHost,
 	toast,
+	modal,
 	getNowObj,
 	isRealString
 }

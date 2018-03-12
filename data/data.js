@@ -2,7 +2,7 @@ const routes = [{
 	title: "地铁路线",
 	icon: "i-subway",
 	width: "100%",
-	arrowIdx: 0,
+	arrowIdx: 1,
 	routeArray: [{
 		descArray: [{}, {}, {}]
 	}]
@@ -18,7 +18,7 @@ const routes = [{
 	arrowIdx: 0
 }, {
 	title: "附近建筑",
-	icon: "i-bus",
+	icon: "i-building",
 	width: "60%",
 	arrowIdx: 0
 }, {

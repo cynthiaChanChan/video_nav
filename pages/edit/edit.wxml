@@ -24,8 +24,8 @@
  	</view>
  	<view class="routes-wrapper">
  		<view class="title">请选择以下交通路线并填写</view>
- 		<view class="route" bindtap="edit" data-index="{{index}}" wx:for="{{routes}}" wx:key="index">
-	 		<view class="flex-box">
+ 		<view class="route"  wx:for="{{routes}}" wx:key="index">
+	 		<view class="flex-box route-title {{item.arrowIdx == 0 ? '' : 'hasMargin'}}" bindtap="edit" data-index="{{index}}">
 		 		<view class="icon-wrapper">
 		 			<image class="icon" src="{{img}}{{item.icon}}.png" style="width: {{item.width}};" mode="widthFix"></image>
 		 		</view>
@@ -37,8 +37,23 @@
 					<view class="li flex-box" wx:for="{{list.descArray}}" wx:for-item="li" wx:for-index="i" wx:key="i">
 						<view class="circle"></view>
 						<view class="input-wrapper">
-							<input bindinput="phoneInput" maxlength="20" placeholder-style="font-size: 30rpx; color: #d0d0d0; padding-left: 10rpx;" />
+							<input bindinput="descInput" bindlongpress="deleteDesc" data-index="{{index}}" data-idx="{{idx}}" data-i="{{i}}" maxlength="20" placeholder-style="font-size: 30rpx; color: #d0d0d0; padding-left: 10rpx;" placeholder="{{inputHint[hintIdx]}}" />
 						</view>
+					</view>
+				</view>
+				<view class="add-input" bindtap="addInput" data-index="{{index}}" data-idx="{{idx}}">
+					<image src="{{img}}plus_grey.png" ></image>
+					<view class="h3">增加</view>
+				</view>
+				<view class="media">
+					<view class="media-type">
+						<image src="../../images/i-video.png" ></image>
+					</view>
+					<view class="media-type">
+						<image src="../../images/i-camera.png" ></image>
+					</view>
+					<view class="media-type">
+						<image src="../../images/i-record.png" ></image>
 					</view>
 				</view>
 			</view>
